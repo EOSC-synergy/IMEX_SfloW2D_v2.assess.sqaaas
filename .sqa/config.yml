@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/demichie/IMEX_SfloW2D_v2:
+      branch: master
+      repo: https://github.com/demichie/IMEX_SfloW2D_v2
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-teal-gerbil.sh
+        container: qc.acc_snoopy-alizarin-crane
+  QC.Doc:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-ultramarine-woodlouse.sh
+        container: qc.doc_pretty-russet-eleuth
+      github.com/demichie/IMEX_SfloW2D_v2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-orange-guppy.sh
+        container: qc.doc_wimpy-wisteria-husky
+      github.com/demichie/IMEX_SfloW2D_v2 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-asparagus-goat.sh
+        container: qc.doc_grumpy-firebrick-mandrill
+  QC.Lic:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-amaranth-saola.sh
+        container: qc.lic_chummy-ecru-crane
+  QC.Met:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-indigo-dunker.sh
+        container: qc.met_goopy-teal-tortoise
+  QC.Sec:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-mustard-uguisu.sh
+        container: qc.sec_snippy-lime-monkey
+  QC.Sty:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-flax-bullfrog.sh
+        container: qc.sty_crappy-razzmatazz-toad
+      github.com/demichie/IMEX_SfloW2D_v2 hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-salmon-cow.sh
+        container: qc.sty_frumpy-apricot-hornet
+  QC.Ver:
+    repos:
+      github.com/demichie/IMEX_SfloW2D_v2 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-cerise-bat.sh
+        container: qc.ver_jumpy-champagne-dormouse
+timeout: 5400
