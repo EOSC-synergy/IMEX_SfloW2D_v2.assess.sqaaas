@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-gold-dragon.sh
-        container: qc.acc_sickly-cobalt-lemming
+        - /usr/bin/env sh .sqa/script.sunny-bronze-barnacle.sh
+        container: qc.acc_paltry-puce-cheetah
   QC.Doc:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-xanthic-frigatebird.sh
-        container: qc.doc_cheeky-olive-zebra
+        - /usr/bin/env sh .sqa/script.lousy-platinum-binturong.sh
+        container: qc.doc_muggy-buff-quoll
       github.com/demichie/IMEX_SfloW2D_v2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-apricot-llama.sh
-        container: qc.doc_pasty-bronze-iguana
+        - /usr/bin/env sh .sqa/script.sickly-gamboge-ragdoll.sh
+        container: qc.doc_jumpy-auburn-salamander
       github.com/demichie/IMEX_SfloW2D_v2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-chartreuse-quetzal.sh
-        container: qc.doc_dorky-amber-mandrill
+        - /usr/bin/env sh .sqa/script.muzzy-emerald-caterpillar.sh
+        container: qc.doc_gummy-apricot-turkey
   QC.Lic:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-sangria-hedgehog.sh
-        container: qc.lic_skinny-goldenrod-cow
+        - /usr/bin/env sh .sqa/script.lousy-bronze-kudu.sh
+        container: qc.lic_frumpy-platinum-sheepdog
   QC.Met:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-xanthic-cockroach.sh
-        container: qc.met_skimpy-beige-koala
+        - /usr/bin/env sh .sqa/script.craggy-cinnamon-spitz.sh
+        container: qc.met_scanty-carmine-dingo
   QC.Sec:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-wisteria-hornet.sh
-        container: qc.sec_hilly-celadon-sponge
+        - /usr/bin/env sh .sqa/script.snazzy-lemon-setter.sh
+        container: qc.sec_blurry-lemon-husky
   QC.Sty:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-viridian-ant.sh
-        container: qc.sty_chummy-chartreuse-cat
+        - /usr/bin/env sh .sqa/script.slaphappy-khaki-heron.sh
+        container: qc.sty_stinky-burgundy-audemer
       github.com/demichie/IMEX_SfloW2D_v2 hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-xanthic-leopard.sh
-        container: qc.sty_stealthy-heliotrope-olm
+        - /usr/bin/env sh .sqa/script.stealthy-ochre-spoonbill.sh
+        container: qc.sty_foggy-aqua-turtle
   QC.Ver:
     repos:
       github.com/demichie/IMEX_SfloW2D_v2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-sapphire-bird.sh
-        container: qc.ver_zippy-rust-olm
+        - /usr/bin/env sh .sqa/script.muggy-aquamarine-abyssinian.sh
+        container: qc.ver_ugly-purple-gibbon
 timeout: 5400
